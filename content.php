@@ -118,6 +118,7 @@ $getbooks=mysqli_query($connection, "SELECT * FROM lib.content where typeid=('tx
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATALOGUE-<?php echo $thehead ?></title>
+ <link rel="shortcut icon" href="imon.png">
 </head>
 <?php
 include("resolu.php");

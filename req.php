@@ -194,6 +194,7 @@ background-color: mediumseagreen;
 }
 
 </style>
+ <link rel="shortcut icon" href="imon.png">
 </head>
 
 <?php

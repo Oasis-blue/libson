@@ -42,6 +42,7 @@ if(isset($_SESSION['user'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOG IN</title>
+ <link rel="shortcut icon" href="imon.png">
 </head><style>
 body{
  background-image:url("5.jpg");

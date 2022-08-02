@@ -48,6 +48,7 @@ $msg='<p>Your suggestion has been submitted.<a href="index.php">Go to homepage</
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make a suggestion</title>
+ <link rel="shortcut icon" href="imon.png">
 </head>
 <?php
 include("resolu.php");

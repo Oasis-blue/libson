@@ -4,11 +4,24 @@ include("exfix.php");
 
 ?>
 
-
+  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/106f5920d2.js" crossorigin="anonymous"></script>
 <style>
-  /* Link */
+/* Talk */
+.talk{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ min-height:100vh;
+}
+
+
+
+ /* Image */
+ .talk img{
+  width:61%;
+ }
 
 
   /* Navigation */
@@ -904,13 +917,27 @@ include("exfix.php");
   .idk {
     width: 100% !important;
   }
+  .up .flink{
+ border-bottom-style:solid;
+ border-bottom-color: rgba(0, 0, 0, 0);
+ border-bottom-left-radius:6px;
+ border-bottom-right-radius:6px;
+ box-shadow:0px 0px 2px 0px rgba(0,0,0,0.1);
 
-
+}
+ 
   /* Flink (hover) */
-  .flink:hover {
-    opacity: 0.75;
-    color: #19ebdd;
-  }
+  /* Bold Tag (hover) */
+.up .flink:hover{
+ border-bottom-style:solid;
+ border-bottom-color:#2fde6f;
+ border-bottom-left-radius:6px;
+ border-bottom-right-radius:6px;
+ box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);
+
+}
+
+
 
 
   /* Division */

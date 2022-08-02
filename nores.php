@@ -24,6 +24,7 @@ include("checkses.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notifications</title>
+ <link rel="shortcut icon" href="imon.png">
 </head>
 <?php
 include("resolu.php");
@@ -62,8 +63,36 @@ include("header.php");
 
 
 <?php
+
+
+
+$checkexr=mysqli_query($connection, "select * from lib.requests where approval_status='issued'");
+if(mysqli_num_rows($checkexr)>0){
+  
+  while($ccrr=mysqli_fetch_assoc($checkexr)){
+
+    $rgcar=date("Y-m-d");
+    $dyr=(strtotime($rgcar));
+    $strr = $ccrr["expected_return_date"];
+
+
+$timestamp = strtotime($strr);
+
+
+
+    if(($dyr-$timestamp)>0 or ($dyr-$timestamp)>=-86400){
+     
+      
+$fc[]=$ccrr["requestid"];
+}
+
+  }$coundf=count($fc);}
+
+  $coundf=$coundf ?? "";
+
+
 $checknot=mysqli_query($connection, "select * from lib.notreqs");
-if(mysqli_num_rows($checknot)>0){
+if((mysqli_num_rows($checknot)>0) or ($coundf>0)){
     
 ?>
 
@@ -116,6 +145,130 @@ echo $isd['email']
 ?>
 </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="erer"><ul>
+<?php
+
+
+  for($rose=0; $rose < $coundf; $rose++){
+
+$ref=$fc[$rose];
+$cccce=mysqli_query($connection,"select * from lib.requests where requestid='$ref'");
+$eree=mysqli_fetch_assoc($cccce);
+if(mysqli_num_rows($cccce)>0){
+
+$gets=$eree['bookid'];
+$ccccd=mysqli_query($connection,"select * from lib.content where contentid='$gets'");
+$ered=mysqli_fetch_assoc($ccccd);
+$date1=date_create($rgcar);
+$date2=date_create($strr);
+
+$requ=$eree["requesterid"];
+
+$rewu='<a href="userdetails.php?id='.$requ.'" title="view user">User '.$requ."</a>";
+?>
+
+<li>
+<div class="ht">
+
+<div>
+
+
+<?php
+
+if(($dyr-$timestamp)>0){
+
+
+
+
+    $diff=date_diff($date1,$date2);
+    echo "<span style='color:red'>Notice!:</span> ".$rewu." has exceeded the return date   of <u>".$ered['title']."</u> by ";
+    echo $diff->format("%R%a day(s)");
+
+}elseif(($dy-$timestamp)>=-86400){
+    if(($dy-$timestamp)==0){
+  echo "<span style='color:orange'>Notice!:</span> Exceeded";
+$diff=date_diff($date1,$date2);
+echo $diff->format("%R%a day(s).");
+echo "<br> Today is expected return date for ";
+echo "<u>".$ered['title']."</u> ";
+echo "<br> By $rewu.";
+
+
+}else{
+
+echo "<span style='color:green'>".$rewu." has ";
+
+
+$diff=date_diff($date1,$date2);
+echo $diff->format("%R%a day(s)");
+echo " left to return ";
+echo "<u>".$ered['title']."</u> ";
+
+;
+
+}}
+
+?>
+
+
+</div>
+
+
+
+
+</div>
+</li>
+
+<hr>
+<?php
+
+
+}}
+
+?>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php
 

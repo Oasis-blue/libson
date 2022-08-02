@@ -112,7 +112,7 @@ $_SESSION['yy']=$yearrr;
 
 include("resolution.php");
 
-?>
+?>  <link rel="shortcut icon" href="imon.png">
 </head>
 <style>
 
@@ -222,9 +222,7 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active {
-  background-color: #717171;
-}
+
 
 /* Fading animation */
 .fade {
@@ -246,13 +244,13 @@ img {vertical-align: middle;}
 
 <body>
 
-  <table width="100%" class="tabb">
+  <table width="100%" class="tabb" >
 
 
   <?php  include("header.php"); ?>
     <!---->
 <div>
-
+<p><a href="#gotosec" id="toppp">Search</a></p>
 
 
 <div class="slideshow-container">
@@ -292,7 +290,7 @@ img {vertical-align: middle;}
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
-  <span class="dot"></span> 
+  <span class="dot" id="gotosec"></span> 
 </div>
 
 <script>
@@ -321,7 +319,7 @@ function showSlides() {
 
     <tr height="10%" class="se">
       <td>
-        <p class="qu">Looking for something?</p>
+        <p class="qu" >Looking for something?</p>
         <br>
         <form method="POST">
           <div class="sear">
@@ -374,7 +372,35 @@ function showSlides() {
         </form>
       </td>
     </tr>
+  </table>
+  <div class="talk">
+    <img alt="image" src="doin.png">
+  </div>
 
+
+  <div class="talk">
+    <img alt="image" src="doin2.png">
+  </div>
+
+  <div class="talk">
+    <img alt="image" src="doin3.png">
+  </div>
+  <div class="talk">
+    <img alt="image" src="doin4.png">
+  </div>
+  <div class="talk">
+    <img alt="image" src="doin5.png">
+  </div>
+
+  <div class="talk">
+   <center> <a href="signup.php"><img alt="image" src="doing6.png"></a></center>
+  </div>
+
+  <div class="talk">
+   <center> <a href="#toppp"><img alt="image" src="doing7.png"></a></center>
+  </div>
+
+<table width="100%" class="tabb">
     <tr height="75%" class="bod">
       <td></td>
     </tr>

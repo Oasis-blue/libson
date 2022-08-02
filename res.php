@@ -71,6 +71,7 @@ if (!isset($_SESSION['search'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search results</title>
+ <link rel="shortcut icon" href="imon.png">
 </head>
 <?php
 include("resolu.php");

@@ -84,6 +84,28 @@ $userlog="";
 $getlibcard="";
 
 
+$checkex=mysqli_query($connection, "select * from lib.requests where approval_status='issued'");
+if(mysqli_num_rows($checkex)>0){
+  
+  while($ccr=mysqli_fetch_assoc($checkex)){
+
+    $rgca=date("Y-m-d");
+    $dy=(strtotime($rgca));
+    $str = $ccr["expected_return_date"];
+
+
+$timestamp = strtotime($str);
+
+
+
+    if(($dy-$timestamp)>0 or ($dy-$timestamp)>=-86400){
+     
+      
+$c[]=2;
+}
+
+  }$coun=count($c);
+  $notif='<a class="flink" href="nores.php">Notifications('.$coun.')</a>';}
 
 $checknot=mysqli_query($connection, "select * from lib.notreqs");
 if(mysqli_num_rows($checknot)>0){
@@ -118,6 +140,34 @@ $coun=count($c);
       $bottom1='<a class="flink" href="viewreqq.php">My requests('.$count.')</a>';
      
 $reqq='  <li class="item"><a href="sugg.php" class="navlink">REQUEST AN ADDITION</a></li>';
+
+
+
+
+
+$checkex=mysqli_query($connection, "select * from lib.requests where approval_status='issued' and requesterid='$user'");
+if(mysqli_num_rows($checkex)>0){
+  
+  while($ccr=mysqli_fetch_assoc($checkex)){
+
+    $rgca=date("Y-m-d");
+    $dy=(strtotime($rgca));
+    $str = $ccr["expected_return_date"];
+
+
+$timestamp = strtotime($str);
+
+
+
+    if(($dy-$timestamp)>0 or ($dy-$timestamp)>=-86400){
+     
+      
+$c[]=2;
+}
+
+  }$coun=count($c);
+  $notif='<a class="flink" href="noti.php">Notifications('.$coun.')</a>';
+}
 
 $checknot=mysqli_query($connection, "select * from lib.notreqs where userid='$user'");
 if(mysqli_num_rows($checknot)>0){

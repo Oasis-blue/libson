@@ -25,6 +25,7 @@ include("checkses.php");
     <script src='main.js'></script>
 
 
+ <link rel="shortcut icon" href="imon.png">
 </head>
 <?php
 include("resolu.php");
