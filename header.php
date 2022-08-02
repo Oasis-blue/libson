@@ -1708,25 +1708,25 @@ include("exfix.php");
 
 
   <?php if (isset($bottom7)) {
-    echo $bottom7;
+    echo $bottom7 ?? "";
   } ?>
   <?php if (isset($bottom4)) {
-    echo $bottom4;
+    echo $bottom4 ?? "";
   } ?>
   <?php if (isset($bottom3)) {
-    echo $bottom3;
+    echo $bottom3 ?? "";
   } ?>
   <?php if (isset($bottom1)) {
-    echo $bottom1;
+    echo $bottom1 ?? "";
   } ?>
   <?php if (isset($bottom2)) {
-    echo $bottom2;
+    echo $bottom2 ?? "";
   } ?>
   <?php if (isset($bottom22)) {
-    echo $bottom22;
+    echo $bottom22 ?? "";
   } ?>
   <?php if (isset($notif)) {
-    echo $notif;
+    echo $notif ?? "";
   } ?>
 </div>
 
