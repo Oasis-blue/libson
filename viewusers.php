@@ -142,6 +142,7 @@ function myFunctionne() {
 
 
 
+     <a href="index.php"><button class="homep">Go to homepage</button></a>
     <hr>
 
     <div class="colo">

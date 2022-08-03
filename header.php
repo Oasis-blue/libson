@@ -8,6 +8,23 @@ include("exfix.php");
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/106f5920d2.js" crossorigin="anonymous"></script>
 <style>
+  /* Homep */
+a .homep{
+ cursor:pointer;
+ background-color:rgba(240,240,240,0);
+ border-width:1px;
+ padding-top:5px;
+ padding-bottom:5px;
+ margin-left:6px;
+}
+
+/* Homep (hover) */
+a .homep:hover{
+ background-color:rgba(129,79,221,0.81);
+ color:#ffffff;
+}
+
+
 /* Talk */
 .talk{
  display:flex;

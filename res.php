@@ -93,6 +93,7 @@ include("resolu.php");
         ?>
 
     </table>
+     <a href="index.php"><button class="homep">Go to homepage</button></a>
     <hr><center><div class="sijdf">
         <p class="head">
             <a href="index.php" class="back">Go back</a>

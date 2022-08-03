@@ -50,7 +50,8 @@ include("header.php");
 ?>
 
 </table>  
-<hr>
+ <a href="index.php"><button class="homep">Go to homepage</button></a>
+    <hr>
 
 <br>
 <div class="colo">

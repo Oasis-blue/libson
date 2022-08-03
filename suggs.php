@@ -108,7 +108,8 @@ include("header.php");
 ?>
 
 </table>  
-<hr>
+ <a href="index.php"><button class="homep">Go to homepage</button></a>
+    <hr>
 
 
 <div class="heading"><h1>Suggestions</h1></div>

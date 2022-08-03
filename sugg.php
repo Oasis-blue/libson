@@ -72,7 +72,8 @@ include("header.php");
 ?>
 
 </table>  
-<hr>
+ <a href="index.php"><button class="homep">Go to homepage</button></a>
+    <hr>
 
 
 <div style="font-family: poppins; min-height: 100vh; min-width: 100vw; display: flex; align-items: center; flex-direction: column; justify-content: center;">

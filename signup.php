@@ -81,6 +81,7 @@ include("header.php");
 
         ?>
     </table>
+   <a href="index.php"><button class="homep">Go to homepage</button></a>
     <hr>
 
     <p class="mmm" id="mmm" style="text-align: center"><?php echo $signerr ?? "";?></p>

@@ -100,7 +100,8 @@ include("header.php");
 ?>
 
 </table>  
-<hr>
+ <a href="index.php"><button class="homep">Go to homepage</button></a>
+    <hr>
 <div class="ssaf">
 <div class="alr">
 <div class="erreerr">    <br>      <br>  
